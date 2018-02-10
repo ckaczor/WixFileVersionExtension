@@ -61,7 +61,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="wix">
-      <HintPath>C:\Program Files (x86)\WiX Toolset v3.8\bin\wix.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\WiX Toolset v3.11\bin\wix.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +83,13 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LICENSE.md" />
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
