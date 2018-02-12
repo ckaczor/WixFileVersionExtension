@@ -89,6 +89,7 @@
     <Content Include=".gitignore" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="appveyor.yml" />
     <None Include="LICENSE.md" />
     <None Include="README.md" />
     <None Include="WixFileVersionExtension.nuspec" />

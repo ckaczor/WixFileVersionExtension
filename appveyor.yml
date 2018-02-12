@@ -1,0 +1,24 @@
+version: 1.0.0.{build}
+pull_requests:
+  do_not_increment_build_number: true
+image: Visual Studio 2015
+configuration: Release
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+build:
+  verbosity: minimal
+after_build:
+- cmd: nuget pack WixFileVersionExtension.nuspec -Version %appveyor_build_version% -Properties Configuration=Release -OutputDirectory bin\Release\
+artifacts:
+- path: bin\$(configuration)\WixFileVersionExtension.dll
+  name: WixFileVersionExtension
+- path: bin\$(configuration)\WixFileVersionExtension.*.nupkg
+  name: NuGet
+deploy:
+- provider: Environment
+  name: GitHub
+- provider: Environment
+  name: NuGet
