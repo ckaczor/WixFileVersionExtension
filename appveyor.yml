@@ -9,6 +9,7 @@ assembly_info:
   assembly_version: '{version}'
   assembly_file_version: '{version}'
 build:
+  project: WixFileVersionExtension.sln
   verbosity: minimal
 after_build:
 - cmd: nuget pack WixFileVersionExtension.nuspec -Version %appveyor_build_version% -Properties Configuration=Release -OutputDirectory bin\Release\
