@@ -23,7 +23,3 @@ deploy:
   name: GitHub
 - provider: Environment
   name: NuGet
-- provider: NuGet
-  server: https://ci.appveyor.com/nuget/ckaczor-76mhtg9dykal/api/v2/package
-  api_key:
-    secure: 0Iw3/MIr1la+nKrL867r7Z6ugsgb8PbveFrGN+EnWew=
